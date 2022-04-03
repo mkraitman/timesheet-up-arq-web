@@ -28,6 +28,6 @@ Estos seran las caracteristicas en general que debe tener la interface para pode
 - ...
 
 ## Endpoints:
-Estaran en una documentacino con Swagger a medida que se desarrolle que se vaya desarrollando la API.
+Estaran en una documentacion con Swagger a medida que se desarrolle que se vaya desarrollando la API.
 
 *Tanto los requerimientos como las entidades son para comenzar la aplicacion, muy posiblemente se agregen mas.*
