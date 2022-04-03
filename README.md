@@ -1,4 +1,4 @@
-# Arquitectura WEB 1 Cuatrimestre 2022 - Universidad de Palermo
+# Timesheet - Arquitectura WEB 1 Cuatrimestre 2022 - UP
 
 ## Objetivo del proyecto:
 Armar una API que exponga un servicio de carga de horas para una consultora con diferentes proyectos.
