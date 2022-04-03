@@ -5,16 +5,17 @@ Armar una API que exponga un servicio de carga de horas para una consultora con 
 
 ## Entidades:
 Van a existir diferentes entidades para poder cumplir el requerimiento.
-- Empleado / Employee:
+- Empleado / Employee:  
 Carga las horas de trabajo realizadas, las elimina o acualiza.
-- Manager:
+- Manager:  
 El encargado de revisr las horas, obtener un "reporte" o cierta informacion y validar la correcta carga del empleado.
-- Item:
+- Item:  
 El conjunto con la cantidad de horas cargadas para ese dia, el proyecto al cual pertenece y el empleado que carga las horas.
-- Carga mensual / Montly Load:
+- Carga mensual / Montly Load:  
 Tiene toda la informacion cargada del tablero, todos los items de un mes cargado mas la informacion general de cada mes.
-- Holidays
+- Holidays:  
 Todos los feriados existenetes. Mediante los datos enviados se calcularan los feriados.
+- ...
 
 ## Requerimientos:
 Estos seran las caracteristicas en general que debe tener la interface para poder intergrarse correctamente con un front-end.
@@ -24,5 +25,6 @@ Estos seran las caracteristicas en general que debe tener la interface para pode
 - Edicion o eliminacion de horas cargadas.
 - Historico de horas cargadas.
 - Cierre de horas mensual.
+- ...
 
 *Tanto los requerimientos como las entidades son para comenzar la aplicacion, muy posiblemente se agregen mas.*
