@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.3.5",
+    "mongoose-auto-increment": "^5.0.1"
+  }
+}
