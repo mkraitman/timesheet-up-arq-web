@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Employee = require('../models/Employee');
 var EmployeeModel = mongoose.model('Employee', EmployeeModel);
-const Project = require('../models/Project');
+var Project = require('../models/Project');
 var ProjectModel = mongoose.model('Project', ProjectModel);
 
 async function save(req, res) {
@@ -20,7 +20,7 @@ async function find(req, res) {
 
 async function findById(req, res) {
     try {
-        let project = await ProjectModel.findById(req.params.id).populate('team');
+        let project = await ProjectModel.findById(req.params.id).populate('team').populate('team').populate('team.employee');
         if (!project)
             return res.status(404).send({ message: "Project not found" });
 
@@ -31,7 +31,7 @@ async function findById(req, res) {
 }
 
 async function remove(req, res) {
-    let project = await ProjectModel.findByIdAndDelete(req.params.id);
+    let project = await ProjectModel.findByIdAndDelete(req.params.id).populate('team').populate('team.employee');
     if (!project)
         return res.status(404).send({ message: "Project not found" });
 
@@ -50,7 +50,7 @@ async function addTeammate(req, res) {
 
     project.team.push(employee);
 
-    await project.save();
+    project = await project.save().populate('team').populate('team.employee');
 
     return res.status(200).send({ project });
 }

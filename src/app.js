@@ -2,7 +2,6 @@ const express = require('express')
 const mongoose = require('mongoose');
 const router = require('./routes/index');
 const bodyParser = require('body-parser')
-//const SwaggerUI = require('swagger-ui')
 
 const app = express()
 const port = 3000
@@ -24,20 +23,6 @@ app.use(bodyParser.json())
  * Router
  */
 app.use('/', router);
-
-
-/**
- * Swagger UI
- */
-//app.use(express.static(pathToSwaggerUi));
-
-/**
- * Middleware logger for request
- */
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url} ${res.statusCode}`);
-  next();
-});
 
 
 app.listen(port, () => {

@@ -21,12 +21,12 @@ router.post('/api/v1/employee', EmployeeController.save);
 router.get('/api/v1/employee', EmployeeController.find);
 router.get('/api/v1/employee/:id', EmployeeController.findById);
 router.delete('/api/v1/employee/:id', EmployeeController.remove);
+router.patch('/api/v1/employee/:id', EmployeeController.update);
 
 /** Hours */
-router.post('/api/v1/hours', EmployeeController.save);
-router.get('/api/v1/employee', EmployeeController.find);
-router.get('/api/v1/employee/:id', EmployeeController.findById);
-router.delete('/api/v1/employee/:id', EmployeeController.remove);
-
+router.post('/api/v1/hours', HoursController.load);
+router.get('/api/v1/hours/project/:projectId', HoursController.findByProject);
+router.get('/api/v1/hours/employee/:employeeId', HoursController.findByEmployee);
+router.get('/api/v1/hours', HoursController.find);
 
 module.exports = router;

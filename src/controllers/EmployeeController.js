@@ -32,5 +32,11 @@ async function remove(req, res) {
     return res.status(200).send({ employee });
 }
 
+async function update(req, res) {
+    let employee = await EmployeeModel.findByIdAndUpdate(req.params.id, req.body);
 
-module.exports = { save, find, findById, remove };
+    return employee;
+}
+
+
+module.exports = { save, find, findById, remove, update };

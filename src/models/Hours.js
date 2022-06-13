@@ -1,8 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var Hours = new Schema({
+var HoursSchema = new Schema({
     quantity: Number,
+    day: Date,
     project: {
         type: Schema.Types.ObjectId,
         ref: 'Project'
@@ -10,13 +11,10 @@ var Hours = new Schema({
     employee: {
         type: Schema.Types.ObjectId,
         ref: 'Employee'
-    },
-    day: Date,
-    email: String,
-    phone: String
+    }
 });
 
-var Hours = mongoose.model('Hours');
+var Hours = mongoose.model('Hours', HoursSchema);
 
 
 module.exports = Hours;
